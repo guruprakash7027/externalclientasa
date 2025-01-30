@@ -7,6 +7,25 @@
     </head>
     <body>
         <p> This is a demo for a service agent in external client</p>
+        <script type='text/javascript'>
+        	function initEmbeddedMessaging() {
+        		try {
+        			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
         
+        			embeddedservice_bootstrap.init(
+        				'00DHs00000Eh3EQ',
+        				'External_Client_Deployment',
+        				'https://co1733462646151.my.site.com/ESWExternalClientDeploy1738219997696',
+        				{
+        					scrt2URL: 'https://co1733462646151.my.salesforce-scrt.com'
+        				}
+        			);
+        		} catch (err) {
+        			console.error('Error loading Embedded Messaging: ', err);
+        		}
+        	};
+        </script>
+        <script type='text/javascript' src='https://co1733462646151.my.site.com/ESWExternalClientDeploy1738219997696/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
     </body>
 </html>
